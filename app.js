@@ -17,8 +17,8 @@ var commentRoutes    = require("./routes/comments");
 var campgroundRoutes = require("./routes/campgrounds");
 var indexRoutes      = require("./routes/index");
 
-//mongoose.connect('mongodb://localhost:27017/yelp_camp_v10', { useNewUrlParser: true });
-mongoose.connect("mongodb://bivas:bestofall20@ds149404.mlab.com:49404/bivyelpcamp");
+mongoose.connect(process.env.DATABASEURL);
+//mongoose.connect("mongodb://bivas:bestofall20@ds149404.mlab.com:49404/bivyelpcamp");
 app.use(bodyparser.urlencoded({extended: true}));
 app.use(express.static("public"));
 app.use(methodOverride("_method"));

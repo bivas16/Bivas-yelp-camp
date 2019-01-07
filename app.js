@@ -18,7 +18,7 @@ var campgroundRoutes = require("./routes/campgrounds");
 var indexRoutes      = require("./routes/index");
 
 mongoose.connect(process.env.DATABASEURL);
-//mongoose.connect("mongodb://bivas:bestofall20@ds149404.mlab.com:49404/bivyelpcamp");
+
 app.use(bodyparser.urlencoded({extended: true}));
 app.use(express.static("public"));
 app.use(methodOverride("_method"));
